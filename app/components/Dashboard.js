@@ -16,19 +16,21 @@ const Dashboard = () => {
   const router = useRouter()
   useEffect(() => {
     // console.log(session)
-awaitsession()
+    if (session === undefined) return; 
+
     if (!session) {
       router.push('/login')
     }
     else {
       getData()
     }
-  }, [])
-const awaitsession =async()=>{ await session }
-  const oldUsername = session.user.username
+  }, [session, router])
+
+  const oldUsername = session?.user?.username || ""
   const [form, setform] = useState({})
 
   const getData = async () => {
+    if (!session?.user?.username) return;
     console.log(session.user.username)
     // console.log(form.username)
     let u = await fetchuser({ username: session.user.username })
