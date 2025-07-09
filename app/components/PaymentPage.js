@@ -171,7 +171,7 @@ const PaymentPage = ({ username }) => {
                             {payment.length == 0 && <div><li className='max-md:mt-4'>No payments yet</li> <div className=' flex justify-center mx-auto p-1' > <button onClick={() => { reload() }} className='p-2 rounded-xl bg-black cursor-pointer mx-auto font-bold' > reload </button></div></div>}
                             {payment.map((p, i) => {
                                 return <li key={i} className='flex items-center pt-5 gap-1 font-semibold pl-3' >
-                                    <img src="./avatar.gif" width={29} alt="" /><p> {p.name} donated <strong>₹{p.amount}</strong> with a message "{p.message}"!</p>
+                                    <img src="./avatar.gif" width={29} alt="" /><p> {p.name} donated <strong>₹{p.amount}</strong> with a message &quot;{p.message}&quot;!</p>
                                 </li>
                             })}
                         </ul>
