@@ -16,7 +16,7 @@ const Dashboard = () => {
   const router = useRouter()
   useEffect(() => {
     // console.log(session)
-
+awaitsession()
     if (!session) {
       router.push('/login')
     }
@@ -24,7 +24,7 @@ const Dashboard = () => {
       getData()
     }
   }, [])
-
+const awaitsession =async()=>{ await session }
   const oldUsername = session.user.username
   const [form, setform] = useState({})
 
