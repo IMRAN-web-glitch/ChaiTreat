@@ -28,7 +28,7 @@ const authoptions = NextAuth({
             profilepic: user.image,
             coverpic: user.image,
             razorpayid: "",
-            // razorpaysecret: process.env.RAZORPAY_SECRET,
+            razorpaysecret: "",
 
           })
           await newuser.save()
