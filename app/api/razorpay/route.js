@@ -27,7 +27,7 @@ export const POST = async (req) => {
     if(xx){
         // Update the payment status
         const updatedPayment = await payment.findOneAndUpdate({oid: body.razorpay_order_id}, {isdone: "true"}, {new: true})
-        return NextResponse.redirect(`${process.env.NEXT_PUBLIC_URL}/${updatedPayment.to_user}?paymentdone=true`)  
+        return NextResponse.redirect(`${process.env.NEXTAUTH_URL}/${updatedPayment.to_user}?paymentdone=true`)  
     }
 
     else{
