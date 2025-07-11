@@ -8,6 +8,7 @@ const ConnectDb = async () => {
                 useNewUrlParser: true,
             });
             console.log(`MongoDB Connected: ${conn.connection.host}`);
+                console.log(process.env.NEXTAUTH_URL)
             return conn;
             
         } catch (error) {
