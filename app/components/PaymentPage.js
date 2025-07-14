@@ -103,7 +103,8 @@ const PaymentPage = ({ username }) => {
         });
         }
         // Get the order Id 
-        let a = await initiate(amount, session.user.username, paymentform)
+        let v = await username
+        let a = await initiate(amount, v, paymentform)
         var orderId = a.id
         console.log("Razorpay key: ", currentuser.razorpayid);
 
