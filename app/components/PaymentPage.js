@@ -167,7 +167,7 @@ const PaymentPage = ({ username }) => {
 
                 </div>
                 <div className='flex justify-center items-center gap-5 mt-5  max-md:flex-col-reverse'>
-                    <div className='bg-[#020618] p-4 rounded-lg w-[40vw] h-[50vh] max-md:w-[90vw] overflow-auto'>
+                    <div className='bg-[#020618] p-4 rounded-lg w-[40vw] md:h-[50vh] max-md:w-[90vw] overflow-auto'>
                         <h1 className='font-bold pt-3' >Top 10  Supporters</h1>
                         <ul>
                             {payment.length == 0 && <div><li className='max-md:mt-4'>No payments yet</li> <div className=' flex justify-center mx-auto p-1' > <button onClick={() => { reload() }} className='p-2 rounded-xl bg-black cursor-pointer mx-auto font-bold' > reload </button></div></div>}
@@ -178,7 +178,7 @@ const PaymentPage = ({ username }) => {
                             })}
                         </ul>
                     </div>
-                    <div className='bg-[#020618] p-4 rounded-lg w-[40vw] ,md:h-[50vh] max-md:w-[90vw]' >
+                    <div className='bg-[#020618] p-4 rounded-lg w-[40vw] md:h-[50vh] max-md:w-[90vw]' >
                         <h1 className='font-bold pt-3' >Make Your Payment</h1>
                         <div className='pt-3 pl-3'>
                             <input onChange={handleChange} name='name' value={paymentform.name} className='p-1 rounded-xs bg-slate-800 placeholder:text-slate-300  mt-3 w-full outline-none' type="text" placeholder='Enter Name' />
